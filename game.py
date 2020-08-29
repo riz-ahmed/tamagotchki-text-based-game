@@ -5,10 +5,11 @@ class Pet:
     threshold_hunger = 10
     threshold_boredom = 10
     sounds = ['Mrrp']
-    boredom_decreament = 3
+    boredom_decrement = 3
     hunger_decrement = 2
 
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
         self.hunger = randrange(self.threshold_hunger)
         self.boredom = randrange(self.threshold_boredom)
         self.sounds = self.sounds[:] # creating a new listr of sounds with the same variable name though
@@ -35,4 +36,4 @@ class Pet:
         self.hunger = max(0, self.hunger - self.hunger_decrement)
 
     def __str__(self):
-        return "{} Hungry and {} Moody".format(self.hunger, self.boredom)
+        return "{} is {} Hungry and {} Moody".format(self.name, self.hunger, self.boredom)
