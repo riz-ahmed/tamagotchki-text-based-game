@@ -36,6 +36,3 @@ class Pet:
 
     def __str__(self):
         return "{} Hungry and {} Moody".format(self.hunger, self.boredom)
-
-Kitty = Pet()
-print(Kitty)
